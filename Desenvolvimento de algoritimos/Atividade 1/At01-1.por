@@ -1,8 +1,8 @@
 programa {
   funcao inicio() {
-    real: ngarcom, nhoras, valorhora
+    real ngarcom, nhoras, valorhora
     valorhora = 10.5
-    escreva("Digite o numero de garçons: ")
+    escreva("Digite o numero de garÃ§ons: ")
     leia(ngarcom)
     escreva("Digite o numero de horas: ")
     leia(nhoras)
