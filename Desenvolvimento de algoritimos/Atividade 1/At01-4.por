@@ -1,45 +1,44 @@
 programa {
   funcao inicio() {
       caracter modo
-      escreva("Escolha o sistema /n")
+      escreva("Escolha o sistema \n")
       escreva("(P)iscina, (L)avanderia")
       leia(modo)
       escolha (modo)
       {
-        caso "L":
-          real qnt, valor
+        caso 'L':
+          inteiro qnt, valor
           escreva("Digite a quantidade de roupas ")
           leia(qnt)
-          escolha (qnt) {
-            caso > 10:
+          logico maior = qnt > 10
+          se (maior) {
               valor = 15
               escreva("Valor da lavanderia: ", valor*qnt)
-            pare
-            caso <= 10:
+          }
+            senao {
               valor = 20
               escreva("Valor da lavanderia: ", valor*qnt)
-            pare
           }
         pare
-        caso "P":
+        caso 'P':
           inteiro idade
           cadeia acompanhado
           escreva("Digite sua idade ")
           leia(idade)
-          escreva("Est� acompanhado? ")
+          escreva("Está acompanhado? ")
           leia(acompanhado)
           logico entrada = idade >= 18 ou acompanhado == "SIM"
           escolha (entrada){
             caso verdadeiro:
               cadeia exame
-              escreva("O exame m�dio est� em dia? ")
+              escreva("O exame médio está em dia? ")
               leia(exame)
               escolha (exame){
                 caso "SIM":
                   escreva("Piscina liberada")
                 pare
                 caso "NAO":
-                  escreva("Fa�a seu exame")
+                  escreva("Faça seu exame")
                 pare 
               }
               pare
@@ -52,3 +51,15 @@ programa {
       } 
   }
 }
+
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 312; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
