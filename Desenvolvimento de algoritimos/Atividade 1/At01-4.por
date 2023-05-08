@@ -28,22 +28,22 @@ programa {
           escreva("Está acompanhado? ")
           leia(acompanhado)
           logico entrada = idade >= 18 ou acompanhado == "SIM"
-          escolha (entrada){
-            caso verdadeiro:
-              cadeia exame
+           se(entrada){
+              caracter exame
               escreva("O exame médio está em dia? ")
               leia(exame)
-              escolha (exame){
-                caso "SIM":
+              escolha (exame) { 
+                caso 'S':
                   escreva("Piscina liberada")
                 pare
-                caso "NAO":
+                caso 'N':
                   escreva("Faça seu exame")
                 pare 
               }
-              pare
-            caso falso:
+              }
+              senao{
               escreva("Providencie um acompanhante maior de idade")
+              }
             pare  
           }
 
@@ -57,7 +57,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 312; 
+ * @POSICAO-CURSOR = 1120; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
